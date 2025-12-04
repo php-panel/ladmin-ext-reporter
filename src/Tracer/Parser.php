@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Reporter\Tracer;
+namespace Ladmin\Reporter\Tracer;
 
 class Parser implements \Iterator
 {
@@ -23,23 +23,13 @@ class Parser implements \Iterator
         return $this->frames;
     }
 
-    public function current()
-    {
-    }
+    public function current() {}
 
-    public function next()
-    {
-    }
+    public function next() {}
 
-    public function key()
-    {
-    }
+    public function key() {}
 
-    public function valid()
-    {
-    }
+    public function valid() {}
 
-    public function rewind()
-    {
-    }
+    public function rewind() {}
 }

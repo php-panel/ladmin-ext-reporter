@@ -1,12 +1,12 @@
 <?php
 
-namespace Encore\Admin\Reporter;
+namespace Ladmin\Reporter;
 
-use Encore\Admin\Controllers\ModelForm;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Grid;
-use Encore\Admin\Layout\Content;
-use Encore\Admin\Reporter\Tracer\Parser;
+use Ladmin\Controllers\ModelForm;
+use Ladmin\Facades\Admin;
+use Ladmin\Grid;
+use Ladmin\Layout\Content;
+use Ladmin\Reporter\Tracer\Parser;
 use Illuminate\Http\JsonResponse;
 
 class ExceptionController
@@ -68,7 +68,7 @@ class ExceptionController
                     return '';
                 }
 
-                return '<pre>'.json_encode($input, JSON_PRETTY_PRINT).'</pre>';
+                return '<pre>' . json_encode($input, JSON_PRETTY_PRINT) . '</pre>';
             });
 
             $grid->created_at();
@@ -85,7 +85,7 @@ class ExceptionController
             $grid->actions(function (Grid\Displayers\Actions $actions) {
                 $actions->disableEdit();
 
-                $path = $actions->getResource().'/'.$actions->getKey();
+                $path = $actions->getResource() . '/' . $actions->getKey();
                 $actions->prepend("<a href=\"$path\"><i class=\"fa fa-search-minus\"></i></a>");
             });
         });
@@ -101,7 +101,7 @@ class ExceptionController
 
             $exception = ExceptionModel::findOrFail($id);
             $trace = "#0 {$exception->file}({$exception->line})\n";
-            $frames = (new Parser($trace.$exception->trace))->parse();
+            $frames = (new Parser($trace . $exception->trace))->parse();
             $cookies = json_decode($exception->cookies, true);
             $headers = json_decode($exception->headers, true);
 

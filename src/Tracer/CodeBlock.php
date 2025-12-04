@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Reporter\Tracer;
+namespace Ladmin\Reporter\Tracer;
 
 class CodeBlock
 {
@@ -42,6 +42,6 @@ class CodeBlock
 
     public function output()
     {
-        return htmlentities($this->prefix.$this->line.$this->suffix);
+        return htmlentities($this->prefix . $this->line . $this->suffix);
     }
 }

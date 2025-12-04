@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Reporter;
+namespace Ladmin\Reporter;
 
-use Encore\Admin\Admin;
+use Ladmin\Admin;
 use Illuminate\Routing\Router;
 
 trait BootExtension

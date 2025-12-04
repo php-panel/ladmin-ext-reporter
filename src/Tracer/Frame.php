@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Reporter\Tracer;
+namespace Ladmin\Reporter\Tracer;
 
 use Illuminate\Support\Str;
 

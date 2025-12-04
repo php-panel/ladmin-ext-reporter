@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Reporter;
+namespace Ladmin\Reporter;
 
 use Illuminate\Database\Eloquent\Model;
 

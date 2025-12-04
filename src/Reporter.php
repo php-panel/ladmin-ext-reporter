@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Reporter;
+namespace Ladmin\Reporter;
 
-use Encore\Admin\Extension;
+use Ladmin\Extension;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Throwable;
@@ -70,10 +70,10 @@ class Reporter extends Extension
         try {
             $this->store($data);
         } catch (Throwable $e) {
-//            $result = $this->reportException($e);
+            //            $result = $this->reportException($e);
         }
 
-//        return $result;
+        //        return $result;
     }
 
     /**

@@ -3,9 +3,8 @@ Exception reporter for laravel-admin
 
 This tool stores the exception information into the database and provides a developer-friendly web interface to view the exception information.
 
-[![StyleCI](https://styleci.io/repos/97900053/shield?branch=master)](https://styleci.io/repos/97900053)
-[![Packagist](https://img.shields.io/packagist/l/laravel-admin-ext/reporter.svg?maxAge=2592000)](https://packagist.org/packages/laravel-admin-ext/reporter)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel-admin-ext/reporter.svg?style=flat-square)](https://packagist.org/packages/laravel-admin-ext/reporter)
+[![Packagist](https://img.shields.io/packagist/l/php-panel/ladmin-ext-reporter.svg?maxAge=2592000)](https://packagist.org/packages/php-panel/ladmin-ext-reporter)
+[![Total Downloads](https://img.shields.io/packagist/dt/php-panel/ladmin-ext-reporter.svg?style=flat-square)](https://packagist.org/packages/php-panel/ladmin-ext-reporter)
 [![Pull request welcome](https://img.shields.io/badge/pr-welcome-green.svg?style=flat-square)]()
 
 ## Screenshot
@@ -15,7 +14,7 @@ This tool stores the exception information into the database and provides a deve
 ## Installation 
 
 ```
-$ composer require laravel-admin-ext/reporter -vvv
+$ composer require php-panel/ladmin-ext-reporter -vvv
 
 $ php artisan vendor:publish --tag=laravel-admin-reporter
 
@@ -30,7 +29,7 @@ Open `app/Exceptions/Handler.php`, call `Reporter::report()` inside `report` met
 
 namespace App\Exceptions;
 
-use Encore\Admin\Reporter\Reporter;
+use Ladmin\Reporter\Reporter;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Validation\ValidationException;
